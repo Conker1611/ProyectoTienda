@@ -1,0 +1,169 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\dient\\OneDrive\\Desktop\\proyecto tienda\\ProyectoTienda\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{191FAD54-2B2D-6FCA-FEDA-6FB29C62CE92}|ProyectoTienda.csproj|c:\\users\\dient\\onedrive\\desktop\\proyecto tienda\\proyectotienda\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{191FAD54-2B2D-6FCA-FEDA-6FB29C62CE92}|ProyectoTienda.csproj|solutionrelative:conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{191FAD54-2B2D-6FCA-FEDA-6FB29C62CE92}|ProyectoTienda.csproj|c:\\users\\dient\\onedrive\\desktop\\proyecto tienda\\proyectotienda\\inventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{191FAD54-2B2D-6FCA-FEDA-6FB29C62CE92}|ProyectoTienda.csproj|solutionrelative:inventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{191FAD54-2B2D-6FCA-FEDA-6FB29C62CE92}|ProyectoTienda.csproj|c:\\users\\dient\\onedrive\\desktop\\proyecto tienda\\proyectotienda\\caja.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{191FAD54-2B2D-6FCA-FEDA-6FB29C62CE92}|ProyectoTienda.csproj|solutionrelative:caja.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{191FAD54-2B2D-6FCA-FEDA-6FB29C62CE92}|ProyectoTienda.csproj|c:\\users\\dient\\onedrive\\desktop\\proyecto tienda\\proyectotienda\\inventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{191FAD54-2B2D-6FCA-FEDA-6FB29C62CE92}|ProyectoTienda.csproj|solutionrelative:inventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{191FAD54-2B2D-6FCA-FEDA-6FB29C62CE92}|ProyectoTienda.csproj|c:\\users\\dient\\onedrive\\desktop\\proyecto tienda\\proyectotienda\\agregarproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{191FAD54-2B2D-6FCA-FEDA-6FB29C62CE92}|ProyectoTienda.csproj|solutionrelative:agregarproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{191FAD54-2B2D-6FCA-FEDA-6FB29C62CE92}|ProyectoTienda.csproj|c:\\users\\dient\\onedrive\\desktop\\proyecto tienda\\proyectotienda\\agregarproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{191FAD54-2B2D-6FCA-FEDA-6FB29C62CE92}|ProyectoTienda.csproj|solutionrelative:agregarproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{191FAD54-2B2D-6FCA-FEDA-6FB29C62CE92}|ProyectoTienda.csproj|C:\\Users\\dient\\OneDrive\\Desktop\\proyecto tienda\\ProyectoTienda\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{191FAD54-2B2D-6FCA-FEDA-6FB29C62CE92}|ProyectoTienda.csproj|solutionrelative:menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{191FAD54-2B2D-6FCA-FEDA-6FB29C62CE92}|ProyectoTienda.csproj|c:\\users\\dient\\onedrive\\desktop\\proyecto tienda\\proyectotienda\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{191FAD54-2B2D-6FCA-FEDA-6FB29C62CE92}|ProyectoTienda.csproj|solutionrelative:menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{191FAD54-2B2D-6FCA-FEDA-6FB29C62CE92}|ProyectoTienda.csproj|C:\\Users\\dient\\OneDrive\\Desktop\\proyecto tienda\\ProyectoTienda\\caja.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{191FAD54-2B2D-6FCA-FEDA-6FB29C62CE92}|ProyectoTienda.csproj|solutionrelative:caja.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AgregarProducto.cs",
+              "DocumentMoniker": "C:\\Users\\dient\\OneDrive\\Desktop\\proyecto tienda\\ProyectoTienda\\AgregarProducto.cs",
+              "RelativeDocumentMoniker": "AgregarProducto.cs",
+              "ToolTip": "C:\\Users\\dient\\OneDrive\\Desktop\\proyecto tienda\\ProyectoTienda\\AgregarProducto.cs",
+              "RelativeToolTip": "AgregarProducto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-03T04:22:37.624Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Conexion.cs",
+              "DocumentMoniker": "C:\\Users\\dient\\OneDrive\\Desktop\\proyecto tienda\\ProyectoTienda\\Conexion.cs",
+              "RelativeDocumentMoniker": "Conexion.cs",
+              "ToolTip": "C:\\Users\\dient\\OneDrive\\Desktop\\proyecto tienda\\ProyectoTienda\\Conexion.cs",
+              "RelativeToolTip": "Conexion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAACRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-03T04:21:46.712Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AgregarProducto.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\dient\\OneDrive\\Desktop\\proyecto tienda\\ProyectoTienda\\AgregarProducto.cs",
+              "RelativeDocumentMoniker": "AgregarProducto.cs",
+              "ToolTip": "C:\\Users\\dient\\OneDrive\\Desktop\\proyecto tienda\\ProyectoTienda\\AgregarProducto.cs [Dise\u00F1o]",
+              "RelativeToolTip": "AgregarProducto.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-03T01:17:12.76Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Inventario.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\dient\\OneDrive\\Desktop\\proyecto tienda\\ProyectoTienda\\Inventario.cs",
+              "RelativeDocumentMoniker": "Inventario.cs",
+              "ToolTip": "C:\\Users\\dient\\OneDrive\\Desktop\\proyecto tienda\\ProyectoTienda\\Inventario.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Inventario.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-03T01:15:34.686Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Caja.cs",
+              "DocumentMoniker": "C:\\Users\\dient\\OneDrive\\Desktop\\proyecto tienda\\ProyectoTienda\\Caja.cs",
+              "RelativeDocumentMoniker": "Caja.cs",
+              "ToolTip": "C:\\Users\\dient\\OneDrive\\Desktop\\proyecto tienda\\ProyectoTienda\\Caja.cs",
+              "RelativeToolTip": "Caja.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T06:46:43.729Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Caja.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\dient\\OneDrive\\Desktop\\proyecto tienda\\ProyectoTienda\\Caja.cs",
+              "RelativeDocumentMoniker": "Caja.cs",
+              "ToolTip": "C:\\Users\\dient\\OneDrive\\Desktop\\proyecto tienda\\ProyectoTienda\\Caja.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Caja.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T06:43:41.252Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Inventario.cs",
+              "DocumentMoniker": "C:\\Users\\dient\\OneDrive\\Desktop\\proyecto tienda\\ProyectoTienda\\Inventario.cs",
+              "RelativeDocumentMoniker": "Inventario.cs",
+              "ToolTip": "C:\\Users\\dient\\OneDrive\\Desktop\\proyecto tienda\\ProyectoTienda\\Inventario.cs",
+              "RelativeToolTip": "Inventario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T06:46:05.033Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Menu.cs",
+              "DocumentMoniker": "C:\\Users\\dient\\OneDrive\\Desktop\\proyecto tienda\\ProyectoTienda\\Menu.cs",
+              "RelativeDocumentMoniker": "Menu.cs",
+              "ToolTip": "C:\\Users\\dient\\OneDrive\\Desktop\\proyecto tienda\\ProyectoTienda\\Menu.cs",
+              "RelativeToolTip": "Menu.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T07:31:07.304Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Menu.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\dient\\OneDrive\\Desktop\\proyecto tienda\\ProyectoTienda\\Menu.cs",
+              "RelativeDocumentMoniker": "Menu.cs",
+              "ToolTip": "C:\\Users\\dient\\OneDrive\\Desktop\\proyecto tienda\\ProyectoTienda\\Menu.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Menu.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T02:54:42.952Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
