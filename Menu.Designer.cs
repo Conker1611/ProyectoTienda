@@ -30,10 +30,8 @@
         {
             button1 = new Button();
             btninventario = new Button();
-            button3 = new Button();
-            button4 = new Button();
-            button5 = new Button();
-            button6 = new Button();
+            btnFiado = new Button();
+            btnVentas = new Button();
             SuspendLayout();
             // 
             // button1
@@ -56,52 +54,33 @@
             btninventario.UseVisualStyleBackColor = true;
             btninventario.Click += button2_Click;
             // 
-            // button3
+            // btnFiado
             // 
-            button3.Location = new Point(539, 32);
-            button3.Name = "button3";
-            button3.Size = new Size(232, 114);
-            button3.TabIndex = 2;
-            button3.Text = "button3";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            btnFiado.Location = new Point(281, 215);
+            btnFiado.Name = "btnFiado";
+            btnFiado.Size = new Size(232, 114);
+            btnFiado.TabIndex = 2;
+            btnFiado.Text = "Fiado";
+            btnFiado.UseVisualStyleBackColor = true;
+            btnFiado.Click += button3_Click;
             // 
-            // button4
+            // btnVentas
             // 
-            button4.Location = new Point(22, 236);
-            button4.Name = "button4";
-            button4.Size = new Size(227, 114);
-            button4.TabIndex = 3;
-            button4.Text = "button4";
-            button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            button5.Location = new Point(281, 236);
-            button5.Name = "button5";
-            button5.Size = new Size(227, 114);
-            button5.TabIndex = 4;
-            button5.Text = "button5";
-            button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            button6.Location = new Point(539, 236);
-            button6.Name = "button6";
-            button6.Size = new Size(227, 114);
-            button6.TabIndex = 5;
-            button6.Text = "button6";
-            button6.UseVisualStyleBackColor = true;
+            btnVentas.Location = new Point(22, 215);
+            btnVentas.Name = "btnVentas";
+            btnVentas.Size = new Size(227, 114);
+            btnVentas.TabIndex = 4;
+            btnVentas.Text = "Historial de ventas";
+            btnVentas.UseVisualStyleBackColor = true;
+            btnVentas.Click += btnVentas_Click;
             // 
             // Menu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(button6);
-            Controls.Add(button5);
-            Controls.Add(button4);
-            Controls.Add(button3);
+            ClientSize = new Size(545, 388);
+            Controls.Add(btnVentas);
+            Controls.Add(btnFiado);
             Controls.Add(btninventario);
             Controls.Add(button1);
             Name = "Menu";
@@ -114,9 +93,9 @@
 
         private Button button1;
         private Button btninventario;
-        private Button button3;
+        private Button btnFiado;
         private Button button4;
-        private Button button5;
+        private Button btnVentas;
         private Button button6;
     }
 }

@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             btnatras = new Button();
-            btnQR = new Button();
+            btnBoleta = new Button();
             btnFiado = new Button();
             label1 = new Label();
             txtMonto = new TextBox();
             btnCobrar = new Button();
-            txtBuscar = new TextBox();
             btnAgregar = new Button();
             dgvCaja = new DataGridView();
             lblTotal = new Label();
             lblVuelto = new Label();
+            buscadorbox = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)dgvCaja).BeginInit();
             SuspendLayout();
             // 
@@ -52,14 +52,15 @@
             btnatras.UseVisualStyleBackColor = true;
             btnatras.Click += btnatras_Click;
             // 
-            // btnQR
+            // btnBoleta
             // 
-            btnQR.Location = new Point(529, 31);
-            btnQR.Name = "btnQR";
-            btnQR.Size = new Size(178, 80);
-            btnQR.TabIndex = 1;
-            btnQR.Text = "QR";
-            btnQR.UseVisualStyleBackColor = true;
+            btnBoleta.Location = new Point(529, 31);
+            btnBoleta.Name = "btnBoleta";
+            btnBoleta.Size = new Size(178, 80);
+            btnBoleta.TabIndex = 1;
+            btnBoleta.Text = "Boleta";
+            btnBoleta.UseVisualStyleBackColor = true;
+            btnBoleta.Click += btnImpresion_Click;
             // 
             // btnFiado
             // 
@@ -69,6 +70,7 @@
             btnFiado.TabIndex = 2;
             btnFiado.Text = "Fiado";
             btnFiado.UseVisualStyleBackColor = true;
+            btnFiado.Click += btnFiado_Click;
             // 
             // label1
             // 
@@ -96,14 +98,6 @@
             btnCobrar.Text = "Cobrar";
             btnCobrar.UseVisualStyleBackColor = true;
             btnCobrar.Click += btnCobrar_Click;
-            // 
-            // txtBuscar
-            // 
-            txtBuscar.Location = new Point(48, 40);
-            txtBuscar.Name = "txtBuscar";
-            txtBuscar.Size = new Size(263, 23);
-            txtBuscar.TabIndex = 6;
-            txtBuscar.TextChanged += txtBuscar_TextChanged;
             // 
             // btnAgregar
             // 
@@ -143,21 +137,30 @@
             lblVuelto.TabIndex = 10;
             lblVuelto.Text = "Vuelto:";
             // 
+            // buscadorbox
+            // 
+            buscadorbox.FormattingEnabled = true;
+            buscadorbox.Location = new Point(57, 40);
+            buscadorbox.Name = "buscadorbox";
+            buscadorbox.Size = new Size(273, 23);
+            buscadorbox.TabIndex = 11;
+            buscadorbox.SelectedIndexChanged += buscadorbox_SelectedIndexChanged;
+            // 
             // Caja
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(731, 617);
+            Controls.Add(buscadorbox);
             Controls.Add(lblVuelto);
             Controls.Add(lblTotal);
             Controls.Add(dgvCaja);
             Controls.Add(btnAgregar);
-            Controls.Add(txtBuscar);
             Controls.Add(btnCobrar);
             Controls.Add(txtMonto);
             Controls.Add(label1);
             Controls.Add(btnFiado);
-            Controls.Add(btnQR);
+            Controls.Add(btnBoleta);
             Controls.Add(btnatras);
             Name = "Caja";
             Text = "Caja";
@@ -170,7 +173,7 @@
         #endregion
 
         private Button btnatras;
-        private Button btnQR;
+        private Button btnBoleta;
         private Button btnFiado;
         private Label label1;
         private TextBox txtMonto;
@@ -180,5 +183,6 @@
         private DataGridView dgvCaja;
         private Label lblTotal;
         private Label lblVuelto;
+        private ComboBox buscadorbox;
     }
 }

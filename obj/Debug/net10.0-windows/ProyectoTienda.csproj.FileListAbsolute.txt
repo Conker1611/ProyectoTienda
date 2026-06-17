@@ -68,3 +68,8 @@ C:\Users\dient\OneDrive\Desktop\proyecto tienda\ProyectoTienda\bin\Debug\net10.0
 C:\Users\dient\OneDrive\Desktop\proyecto tienda\ProyectoTienda\bin\Debug\net10.0-windows\runtimes\win-x64\native\k5sprt64.dll
 C:\Users\dient\OneDrive\Desktop\proyecto tienda\ProyectoTienda\bin\Debug\net10.0-windows\runtimes\win-x64\native\krb5_64.dll
 C:\Users\dient\OneDrive\Desktop\proyecto tienda\ProyectoTienda\bin\Debug\net10.0-windows\runtimes\win-x64\native\krbcc64.dll
+C:\Users\dient\OneDrive\Desktop\proyecto tienda\ProyectoTienda\obj\Debug\net10.0-windows\ProyectoTienda.sourcelink.json
+C:\Users\dient\OneDrive\Desktop\proyecto tienda\ProyectoTienda\obj\Debug\net10.0-windows\ProyectoTienda.Boleta.resources
+C:\Users\dient\OneDrive\Desktop\proyecto tienda\ProyectoTienda\obj\Debug\net10.0-windows\ProyectoTienda.Fiado.resources
+C:\Users\dient\OneDrive\Desktop\proyecto tienda\ProyectoTienda\obj\Debug\net10.0-windows\ProyectoTienda.FiadoN.resources
+C:\Users\dient\OneDrive\Desktop\proyecto tienda\ProyectoTienda\obj\Debug\net10.0-windows\ProyectoTienda.Ventas.resources

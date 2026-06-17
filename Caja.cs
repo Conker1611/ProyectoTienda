@@ -22,6 +22,24 @@ namespace ProyectoTienda
             dgvCaja.Columns.Add("Precio", "Precio");
             dgvCaja.Columns.Add("Codigo", "Codigo");
             dgvCaja.Columns["Codigo"].Visible = false;
+            buscadorbox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            buscadorbox.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            CargarAutocompletado();
+        }
+
+        private void CargarAutocompletado()
+        {
+            AutoCompleteStringCollection nombres = new AutoCompleteStringCollection();
+            MySqlConnection con = Conexion.ObtenerConexion();
+            MySqlCommand cmd = new MySqlCommand("SELECT Nombre FROM Productos", con);
+            con.Open();
+            MySqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                nombres.Add(reader["Nombre"].ToString());
+            }
+            con.Close();
+            buscadorbox.AutoCompleteCustomSource = nombres;
         }
 
         private void btnatras_Click(object sender, EventArgs e)
@@ -33,18 +51,18 @@ namespace ProyectoTienda
 
         private void dgvCaja_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            string busqueda = txtBuscar.Text;
+            string busqueda = buscadorbox.Text;
             if (busqueda == "") return;
 
             MySqlConnection con = Conexion.ObtenerConexion();
             MySqlCommand cmd = new MySqlCommand(
-                "SELECT Nombre, Precio FROM Productos WHERE Codigo = @busqueda", con);
+                "SELECT Nombre, Precio, Codigo FROM Productos WHERE Codigo = @busqueda OR Nombre = @nombre", con);
             cmd.Parameters.AddWithValue("@busqueda", busqueda);
+            cmd.Parameters.AddWithValue("@nombre", busqueda);
 
             con.Open();
             MySqlDataReader reader = cmd.ExecuteReader();
@@ -52,7 +70,8 @@ namespace ProyectoTienda
             {
                 string nombre = reader["Nombre"].ToString();
                 decimal precio = Convert.ToDecimal(reader["Precio"]);
-                dgvCaja.Rows.Add(nombre, "S/ " + precio.ToString("0.00"), busqueda);
+                string codigo = reader["Codigo"].ToString();
+                dgvCaja.Rows.Add(nombre, "S/ " + precio.ToString("0.00"), codigo);
                 total += precio;
                 lblTotal.Text = "TOTAL: S/ " + total.ToString("0.00");
             }
@@ -61,8 +80,8 @@ namespace ProyectoTienda
                 MessageBox.Show("Producto no encontrado");
             }
             con.Close();
-            txtBuscar.Clear();
-            txtBuscar.Focus();
+            buscadorbox.Text = "";
+            buscadorbox.Focus();
         }
 
         private void txtMonto_TextChanged(object sender, EventArgs e)
@@ -74,14 +93,8 @@ namespace ProyectoTienda
             }
         }
 
-        private void txtBuscar_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void lblTotal_Click(object sender, EventArgs e)
         {
-
         }
 
         private void btnCobrar_Click(object sender, EventArgs e)
@@ -95,13 +108,32 @@ namespace ProyectoTienda
             MySqlConnection con = Conexion.ObtenerConexion();
             con.Open();
 
+            // 1. Insertar venta y obtener su Id
+            MySqlCommand cmdVenta = new MySqlCommand(
+                "INSERT INTO Ventas (Fecha, Total) VALUES (@fecha, @total); SELECT LAST_INSERT_ID();", con);
+            cmdVenta.Parameters.AddWithValue("@fecha", DateTime.Now);
+            cmdVenta.Parameters.AddWithValue("@total", total);
+            int ventaId = Convert.ToInt32(cmdVenta.ExecuteScalar());
+
+            // 2. Por cada producto insertar detalle y descontar stock
             foreach (DataGridViewRow fila in dgvCaja.Rows)
             {
                 string codigo = fila.Cells["Codigo"].Value.ToString();
-                MySqlCommand cmd = new MySqlCommand(
+                string nombre = fila.Cells["Nombre"].Value.ToString();
+                string precioTexto = fila.Cells["Precio"].Value.ToString().Replace("S/ ", "");
+                decimal precio = Convert.ToDecimal(precioTexto);
+
+                MySqlCommand cmdDetalle = new MySqlCommand(
+                    "INSERT INTO DetalleVentas (VentaId, NombreProducto, Precio) VALUES (@ventaId, @nombre, @precio)", con);
+                cmdDetalle.Parameters.AddWithValue("@ventaId", ventaId);
+                cmdDetalle.Parameters.AddWithValue("@nombre", nombre);
+                cmdDetalle.Parameters.AddWithValue("@precio", precio);
+                cmdDetalle.ExecuteNonQuery();
+
+                MySqlCommand cmdStock = new MySqlCommand(
                     "UPDATE Productos SET Stock = Stock - 1 WHERE Codigo = @codigo", con);
-                cmd.Parameters.AddWithValue("@codigo", codigo);
-                cmd.ExecuteNonQuery();
+                cmdStock.Parameters.AddWithValue("@codigo", codigo);
+                cmdStock.ExecuteNonQuery();
             }
 
             con.Close();
@@ -117,7 +149,34 @@ namespace ProyectoTienda
 
         private void Caja_Load(object sender, EventArgs e)
         {
+        }
 
+        private void buscadorbox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void btnImpresion_Click(object sender, EventArgs e)
+        {
+            if (dgvCaja.Rows.Count == 0)
+            {
+                MessageBox.Show("No hay productos agregados");
+                return;
+            }
+            Boleta boleta = new Boleta(dgvCaja, total);
+            boleta.ShowDialog();
+        }
+
+     
+        private void btnFiado_Click(object sender, EventArgs e)
+        {
+            if (dgvCaja.Rows.Count == 0)
+            {
+                MessageBox.Show("No hay productos agregados.");
+                return;
+            }
+
+            FiadoN fiado = new FiadoN(total);
+            fiado.ShowDialog();
         }
     }
 }

@@ -17,7 +17,8 @@ namespace ProyectoTienda
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            Fiado fiado = new Fiado();
+            fiado.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -37,6 +38,13 @@ namespace ProyectoTienda
         private void Menu_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnVentas_Click(object sender, EventArgs e)
+        {
+            Ventas ventas = new Ventas();
+            ventas.Show();
+            
         }
     }
 }
