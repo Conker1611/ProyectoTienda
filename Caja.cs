@@ -166,7 +166,7 @@ namespace ProyectoTienda
             boleta.ShowDialog();
         }
 
-     
+
         private void btnFiado_Click(object sender, EventArgs e)
         {
             if (dgvCaja.Rows.Count == 0)
@@ -177,6 +177,50 @@ namespace ProyectoTienda
 
             FiadoN fiado = new FiadoN(total);
             fiado.ShowDialog();
+
+            if (fiado.FiadoGuardado)
+            {
+                MySqlConnection con = Conexion.ObtenerConexion();
+                con.Open();
+
+                // Registrar en Ventas como FIADO
+                MySqlCommand cmdVenta = new MySqlCommand(
+                    "INSERT INTO Ventas (Fecha, Total) VALUES (@fecha, @total); SELECT LAST_INSERT_ID();", con);
+                cmdVenta.Parameters.AddWithValue("@fecha", DateTime.Now);
+                cmdVenta.Parameters.AddWithValue("@total", total);
+                int ventaId = Convert.ToInt32(cmdVenta.ExecuteScalar());
+
+                foreach (DataGridViewRow fila in dgvCaja.Rows)
+                {
+                    string codigo = fila.Cells["Codigo"].Value.ToString();
+                    string nombre = fila.Cells["Nombre"].Value.ToString();
+                    string precioTexto = fila.Cells["Precio"].Value.ToString().Replace("S/ ", "");
+                    decimal precio = Convert.ToDecimal(precioTexto);
+
+                    // Registrar detalle
+                    MySqlCommand cmdDetalle = new MySqlCommand(
+                        "INSERT INTO DetalleVentas (VentaId, NombreProducto, Precio) VALUES (@ventaId, @nombre, @precio)", con);
+                    cmdDetalle.Parameters.AddWithValue("@ventaId", ventaId);
+                    cmdDetalle.Parameters.AddWithValue("@nombre", nombre);
+                    cmdDetalle.Parameters.AddWithValue("@precio", precio);
+                    cmdDetalle.ExecuteNonQuery();
+
+                    // Descontar stock
+                    MySqlCommand cmdStock = new MySqlCommand(
+                        "UPDATE Productos SET Stock = Stock - 1 WHERE Codigo = @codigo", con);
+                    cmdStock.Parameters.AddWithValue("@codigo", codigo);
+                    cmdStock.ExecuteNonQuery();
+                }
+
+                con.Close();
+
+                dgvCaja.Rows.Clear();
+                total = 0;
+                lblTotal.Text = "TOTAL: S/ 0.00";
+                txtMonto.Clear();
+                lblVuelto.Text = "Vuelto:";
+            }
         }
     }
+    
 }
